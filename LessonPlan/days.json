@@ -1,0 +1,30 @@
+{
+    "Mon": {
+        "subject": "Control Systems I",
+        "day": 1
+    },
+    "Tue": {
+        "subject": "EMFT",
+        "day": 2
+    },
+    "Wed": {
+        "subject": "Microwave",
+        "day": 3
+    },
+    "Thu": {
+        "subject": "Digital Communication",
+        "day": 4
+    },
+    "Fri": {
+        "subject": "Sociology",
+        "day": 5
+    },
+    "Sat": {
+        "subject": "Management",
+        "day": 6
+    },
+    "Sun": {
+        "subject": "Embedded",
+        "day": 7
+    }
+}
