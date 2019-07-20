@@ -1,23 +1,102 @@
+import pymongo
 from LessonPlan.parse_syllabus import parse_syllabus
 from database.editdb import dbwrite
 from Search.searchfor import searchfor
+from Search.scrape_smart import open_download
+from os import listdir
+from os.path import isfile, join
 import json
 import os
 import time
+from pprint import pprint
+import re
 
 class Tutor():
     def __init__(self):
+        try:
+            client = pymongo.MongoClient("mongodb://localhost:27017/", serverSelectionTimeoutMS=30)
+            client.server_info() 
+        except pymongo.errors.ServerSelectionTimeoutError as err:
+            print(err)
+            if str(err) == "No servers found yet":
+                print('Starting New server on local machine')
+        global db
+        global subjects
+        global topics
+        global links_db
+        db = client["Tutor"]
+        subjects = db["subjects"]
+        topics = db["topics"]
+        links_db = db["links_db"]
         pass
 
-    def syllabus(self):
+    def Update_syllabus(self):
+        
         syllabus_path = 'Syllabus'
-        for subject, unit, topic in parse_syllabus(self, path=syllabus_path):
-            print("searching for {}: {}".format(unit, topic))
-            links = []
-            for link in searchfor(self, subject, unit, topic):
-                links.append(link)
-            dbwrite(self, subject, unit, topic, links=links)
+        files = [f for f in listdir(syllabus_path) if isfile(join(syllabus_path, f))]
+        for file in files:
+            filename, file_extension = os.path.splitext(file)
+            if file_extension == '.json':
+                print("\rSubject is = %s                         " % filename, end='', flush=True)
+                with open("{}/{}".format(syllabus_path, file), 'r') as f:
+                    subject = json.load(f)
+                    subject["Name"] = filename
+                    subject["links_synched"] = "false"
+                    obj = subjects.find_one_and_update({"Name":filename}, {'$set' : subject}, upsert=True)
+        print()
+        print("Subjects Synched !")
+        print()
 
+    def search_links(self):
+        for subject in subjects.find({"links_synched": "false"}):
+            print("Subject : {}".format(subject["Name"]))
+            for unit in subject["Units"]:
+                print("Unit : {}".format(unit))
+                for topic in subject["Units"][unit]:
+                    trail = " "*(90-len(topic))
+                    print("\rTopic is: {}{}".format(topic, trail), end='', flush=True)
+                    links = {}
+                    i=0
+                    time.sleep(2)
+                    for link in searchfor(self, subject["Name"], unit, topic):
+                        links["{}".format(i)] = link
+                        i+=1
+                    topics.find_one_and_update({"Name": topic}, {
+                                               '$set': {"subject": subject["Name"], "unit": unit, "links": links, "links_synched": "false"}}, upsert=True)
+                print()
+            print()        
+            subjects.find_one_and_update({"Name":subject["Name"]}, {'$set' : {"links_synched" : "true"}})
+        print("Links Synched !")
+        print()
+
+    def download_links(self):
+        link_save_path = "Links"
+        for topic in topics.find({"links_synched": "false"}):
+            buffer = []
+            for link in topic["links"]:
+                for dikt in link:
+                    pprint(topic["links"][dikt])
+                    array = topic["links"][dikt]
+                    name = re.sub(r'(?is):.+', '', topic["Name"])                    
+                    try:
+                        doc, processed_url, found = open_download(
+                            self, topic=name, buffer=buffer, filedir=dikt, link=array[-1])
+                        if not processed_url in buffer:
+                            buffer.append(processed_url)
+                    except IndexError:
+                        continue
+                    time.sleep(5)
+                    if found:
+                        print("found")
+                        links_db.find_one_and_update({"Name": "{} {}".format(topic["Name"], array[-1])},{
+                            '$set': {"path": "{}/{}/{}/{}".format(link_save_path, name, dikt, doc), "Name": doc, "synched": "false"}}, upsert=True)
+                    else:
+                        print("could not process")
+                        topic["links"][dikt] = ""
+                        topics.find_one_and_update({"Name": topic["Name"]}, {'$set': topic})
+            topics.find_one_and_update({"Name": topic["Name"]}, {'$set': {"links_synched" : "true"}})        
+
+    
     def links2notes(self):
         for subject, unit, topic in parse_syllabus(self, path=syllabus_path):
             print("reading syllabus")
@@ -129,4 +208,6 @@ class Tutor():
 
 if __name__ == "__main__":
     tut = Tutor()
-    tut.links2notes()
+    #tut.Update_syllabus()
+    #tut.search_links()
+    #tut.download_links()

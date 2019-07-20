@@ -1,0 +1,52 @@
+{
+    "Units": {
+        "Concept and scope of Industrial Management" : [
+            "Productivity",
+            "Productivity measurement",
+            "productivity index",
+            "types of production system",
+            "Industrial Ownership"
+        ],
+        "Functions of Management" : [
+            "Taylor's Scientific Management Theory",
+            "Fayol's Principles of Management",
+            "Social responsibilities of Management",
+            "Nature of HRM",
+            "functions and importance of HRM"
+        ],
+        "work study and inventory control" : [
+            "Work study",
+            "Work study objectives",
+            "steps in work study",
+            "Method study",
+            "Method study objectives",
+            "steps of method study",
+            "Work Measurement",
+            "stop watch methods",
+            "stop watch methods allowances",
+            "standard time calculations",
+            "work sampling",
+            "Production Planning and Control",
+            "Inventory Control",
+            "Inventory",
+            "Cost",
+            "EOQ Model of inventory control",
+            "ABC Model of inventory control",
+            "VED Model of inventory control"
+        ],
+        "Ouality control" : [
+            "Statistical quality control",
+            "Control charts for variables and attributes",
+            "Acceptance Sampling",
+            "Single sampling - Double sampling plans",
+            "Introduction to TQM"
+        ],
+        "Project management" : [
+            "Project network analysis",
+            "CPM",
+            "PERT",
+            "Project crashing",
+            "resource Leveling"
+        ]
+    }
+}

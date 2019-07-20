@@ -1,0 +1,55 @@
+{
+    "Units": {
+        "basic components of a control system" : [
+            "Basic Components of a control system",
+            "Feedback and its effect",
+            "types of feedback control systems",
+            "Block diagrams Reduction and signal flow graphs",
+            "Modeling of Physical systems",
+            "electrical networks",
+            "mechanical systems elements",
+            "equations of mechanical systems",
+            "sensors and encoders in control systems",
+            "DC motors in control systems", 
+            "Analogous Systems"
+        ],
+        "state variable analysis" : [
+            "Vector matrix representation of state equation",
+            "state transition matrix",
+            "state transition equation",
+            "relationship between state equations & high-order differential equations",
+            "relationship between state equations & transfer functions",
+            "Similarity Transformation",
+            "Decomposition of transfer functions",
+            "Controllability & observability",
+            "Eigen Value and Eigen Vector",
+            "Diagonalization"
+        ],
+        "time domain analysis of control systems" : [
+            "Time response of continuous data systems",
+            "typical test signals for the time response of control systems",
+            "unit step response & time domain specifications",
+            "Steady State error", 
+            "time response of a first order system",
+            "transient response of a prototype second order system"
+        ],
+        "stability of linear control system" : [
+            "Bounded-input bounded-output stability continuous data systems", 
+            "zero-input & asymptotic stability of continuous data systems",
+            "Routh Hurwitz criterion", "Root-Locus Technique",
+            "Properties of the Root Loci",
+            "Design aspects of the Root Loci"
+        ],
+        "frequency domain analysis" : [
+            "resonant peak prototype Second order system",
+            "resonant frequency prototype Second order system",
+            "bandwidth of the prototype Second order system",
+            "effects of adding a zero to the forward path",
+            "effects of adding a pole 1-0 the forward path",
+            "Polar Plot",
+            "Nyquist stability criterion",
+            "relative stability: gain margin and phase margin", 
+            "stability analysis with the Bode plot"
+        ]
+    }
+}

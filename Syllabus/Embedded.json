@@ -1,0 +1,60 @@
+{
+    "Units": {
+        "8051 microcontroller" : [
+            "Introduction",
+            "Microcontrollers and Embedded systems",
+            "Overview of the 8051",
+            "Inside the 8051",
+            "Addressing modes",
+            "assembly programming",
+            "8051 data types and directives",
+            "Interfacing with 8051",
+            "Programming the 8051 timers"
+        ],
+        "MSP430" : [
+            "MSP430x5x series block diagram",
+            "address space",
+            "on-chip peripherals (analog and digital) and Register sets",
+            "Instruction set",
+            "instruction formats",
+            "various addressing modes of 16-bit microcontroller",
+            "Sample embedded system on MSP430 microcontroller",
+            "Memory Mapped Peripherals",
+            "programming System registers",
+            "I/O pin multiplexing",
+            "pull up/down registers",
+            "GPIO control",
+            "Interrupts and interrupt programming"
+        ],
+        "MSP430 Programming" : [
+            "Watch dog timer",
+            "system clocks",
+            "Timer & Real Time Clock (RTC)",
+            "PWM control",
+            "timing generation and measurements",
+            "Analog interfacing and data acquisition ADC and Comparator in MSP430",
+            "data transfer using DMA"
+        ],
+        "MSP430 Communication" : [
+            "Serial communication basics",
+            "Synchronous/Asynchronous interfaces",
+            "UART protocol",
+            "I2C protocol",
+            "SPI protocol",
+            "Implementing and programming UART, I2C, SPI interface using MSP430",
+            "Interfacing external devices"
+        ],
+        "MSP430 Internet of Things" : [
+            "Overview of wireless sensor networks and design examples",
+            "NFC",
+            "ZigBee", 
+            "Bluetooth",
+            "Bluetooth Low Energy",
+            "Wi-Fi",
+            "Adding Wi-Fi capability to the Microcontroller",
+            "Embedded Wi-Fi",
+            "User APIs for Wireless and Networking applications",
+            "Building IoT applications using CC3100 user API for connecting sensors"
+        ]
+    }
+}

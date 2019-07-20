@@ -1,0 +1,74 @@
+{
+    "Units": {
+        "Rectangular   &   circular waveguides" : [
+            "microwave communication and EM spectrum",
+            "Rectangular wave guide  Field Components", 
+            "Rectangular wave guide TE mode", 
+            "Rectangular wave guide TM Mode", 
+            "Rectangular wave guide Dominant TE mode", 
+            "Rectangular wave guide Field Distribution", 
+            "Rectangular wave guide Power",
+            "Rectangular wave guide Attenuation",
+            "Circular waveguides TE modes",
+            "Circular waveguides TM modes",
+            "Circular waveguides Wave velocities",
+            "Microstrip transmission line",
+            "Coupled Microstrip transmission line",
+            "Strip Microstrip transmission line",
+            "Coupled strip line",
+            "Coplanar Microstrip transmission line",
+            "Microwave cavities"
+        ],
+        "Passive microwave devices" : [
+            "Scattering matrix",
+            "Microwave hybrid circuits",
+            "Terminations",
+            "Attenuators",
+            "Phase Shifters", 
+            "Two-hole directional couplers",
+            "S- Matrix of a directional coupler",
+            "Hybrid couplers",
+            "Microwave propagation in ferrites", 
+            "Faraday rotation",
+            "Isolators",
+            "Circulators",
+            "S-parameter analysis of components"
+        ],
+        "Microwave tubes" : [
+             "Limitations of conventional active devices at microwave frequency",
+             "Two cavity Klystron",
+             "Reflex Klystron", 
+             "Magnetron",
+             "Traveling wave tube",
+             "Backward wave oscillators", 
+             "Gyro Devices schematic",
+             "Gyro Devices Principle of operation",
+             "Gyro Devices Performance characteristic",
+             "Gyro Devices applications"
+        ],
+        "Solid state amplifiers and oscillators" : [
+            "Transferred electron devices", 
+            "Gunn effect diodes & modes of operation",
+            "Avalanche transit time devices",
+            "IMPATT diode",
+            "TRAPPAT diode",
+            "BARITT diode"
+        ],
+        "Microwave Measurements" : [
+            "VSWR meter",
+            "Frequency meter",
+            "Spectrum analyser",
+            "Network analyser",
+            "Tunable detector",
+            "Slotted line carriage",
+            "Power meter",
+            "Microwave power measurement",
+            "Insertion loss and attenuation measurement VSWR measurement",
+            "Return loss measurement by a reflectometer",
+            "Frequency measurement",
+            "measurement of cavity Q",
+            "Dielectric constant measurement of a solid",
+            "EM radiation & measurement"
+        ]
+    }
+}

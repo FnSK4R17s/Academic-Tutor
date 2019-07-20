@@ -1,0 +1,63 @@
+{
+    "Units": {
+        "Principles of digital data transmission" : [
+            "Digital Data transmission",
+            "Line coding review",
+            "Pulse shaping",
+            "Scrambling",
+            "Digital receivers",
+            "Eye diagram",
+            "Digital carrier system",
+            "Method of generation and detection of coherent & non-coherent binary ASK, FSK & PSK",
+            "Differential phase shift keying",
+            "Quadrature modulation techniques",
+            "QPSK",
+            "MSK",
+            "M-ary Digital carrier Modulation"
+        ],
+        "Fundamentals of probability theory & random process" : [
+            "Concept of Probability",
+            "Random variable",
+            "Statistical averages",
+            "Correlation",
+            "Sum of Random Variables",
+            "Central Limit Theorem",
+            "Random Process",
+            "Classification of Random Processes Power spectral density",
+            "Multiple random Processes"
+        ],
+        "Performance Analysis of Digital communication system" : [
+            "Optimum linear Detector for Binary polar signaling",
+            "General Binary Signaling",
+            "Coherent Receivers for Digital Carrier Modulations",
+            "Signal Space Analysis of Optimum Detection",
+            "Vector Decomposition of White Noise Random processes",
+            "General Expression for Error Probability of optimum receivers"
+            
+        ],
+        "Spread spectrum Communications" : [
+            "Spread spectrum Communications",
+            "Frequency Hopping Spread Spectrum(FHSS) systems","Direct Sequence Spread Spectrum",
+            "Code Division Multiple Access of DSSS",
+            "Multiuser Detection",
+            "OFDM Communications",
+            "Introduction to information theory",
+            "Measure of Information",
+            "Source Encoding",
+            "Error Free Communication over a Noisy Channel",
+            "Capacity of a discrete and Continuous Memory less channel"
+        ],
+        "Error Correcting codes" : [
+            "Hamming sphere",
+            "hamming distance and Hamming bound",
+            "relation between minimum distance and error detecting and correcting capability",
+            "Linear block codes: encoding and syndrome decoding",
+            "encoder and decoder for systematic cyclic codes",
+            "Convolution codes",
+            "code tree and Trellis diagram",
+            "Viterbi and sequential decoding",
+            "Burst error correction",
+            "Turbo codes"
+        ]
+    }
+}
